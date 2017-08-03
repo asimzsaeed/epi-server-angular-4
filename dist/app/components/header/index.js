@@ -10,26 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var app_service_1 = require("./services/app.service");
-//this metadata of angular which template to used 
-var AppComponent = (function () {
-    function AppComponent($appService) {
-        this.$appService = $appService;
+var HeaderComponent = (function () {
+    function HeaderComponent() {
         this.name = 'Angular';
         this.getName();
     }
-    AppComponent.prototype.getName = function () {
-        this.name = this.$appService.getName();
+    HeaderComponent.prototype.getName = function () {
+        this.name = 'Header';
     };
-    return AppComponent;
+    return HeaderComponent;
 }());
-AppComponent = __decorate([
+HeaderComponent = __decorate([
     core_1.Component({
-        selector: 'vizob-app',
-        template: "<h1>Hello {{name}}</h1>",
-        providers: [app_service_1.AppService]
+        selector: 'vizob-header',
+        template: "\n        <div>This is {{name}}</div>\n    "
     }),
-    __metadata("design:paramtypes", [app_service_1.AppService])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+    __metadata("design:paramtypes", [])
+], HeaderComponent);
+exports.HeaderComponent = HeaderComponent;
+//# sourceMappingURL=index.js.map

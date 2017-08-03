@@ -259,10 +259,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\InsightsPageController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Pages\InsightsPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetupUser.aspx.cs">
@@ -275,6 +277,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
+    <Folder Include="dist\" />
     <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
@@ -282,14 +285,12 @@
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dist\app\app.component.js" />
-    <Content Include="dist\app\app.module.js" />
-    <Content Include="dist\app\services\app.service.js" />
-    <Content Include="dist\main.js" />
     <Content Include="SetupUser.aspx" />
-    <Content Include="src\index.html" />
     <Content Include="src\systemjs-angular-loader.js" />
     <Content Include="src\systemjs.config.js" />
+    <Content Include="webpack.config.js" />
+    <Content Include="webpack.dev.js" />
+    <Content Include="webpack.prod.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
@@ -297,10 +298,6 @@
     </Content>
     <Content Include="App_Data\GeoLiteCity.dat" />
     <Content Include="bs-config.json" />
-    <Content Include="dist\app\app.component.js.map" />
-    <Content Include="dist\app\app.module.js.map" />
-    <Content Include="dist\app\services\app.service.js.map" />
-    <Content Include="dist\main.js.map" />
     <None Include="EPiServerLog.config" />
     <Content Include="packages.config" />
     <Content Include="modules\_protected\Shell\web.config" />
@@ -314,8 +311,9 @@
     <Content Include="Views\StartPage\Index.cshtml" />
     <Content Include="tslint.json" />
     <Content Include="package.json" />
-    <Content Include="src\tsconfig.json" />
+    <Content Include="tsconfig.json" />
     <Content Include="License.config" />
+    <Content Include="Views\InsightsPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -326,8 +324,13 @@
   <ItemGroup>
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\components\Footer\index.ts" />
+    <TypeScriptCompile Include="src\app\components\Header\index.ts" />
     <TypeScriptCompile Include="src\app\services\app.service.ts" />
+    <TypeScriptCompile Include="src\app\components\StartPage\index.ts" />
     <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\vendor.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
